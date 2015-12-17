@@ -10,4 +10,16 @@ describe('#tp-link-connect', function() {
     //do stuff
   });
 
+  it('checkRouterRoute1', function(){
+    //do stuff
+  });
+
+  it('checkRouterRoute2', function(){
+    //do stuff
+  });
+
+  it('checkRouterRoute3', function(){
+    //do stuff
+  });
+
 });
