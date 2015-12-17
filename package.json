@@ -1,0 +1,36 @@
+{
+  "name": "tp-link-connector",
+  "version": "0.0.1",
+  "description": "A node package to connect and interface with tp-link routers, and perhaps switches.",
+  "main": "./src/tp-link-connect.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --reporter spec",
+    "lint": "jshint **",
+    "coverage": "istanbul cover src/tp-link-connect.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TRex22/tp-link-connector.git"
+  },
+  "keywords": [
+    "tp-link",
+    "router",
+    "connector"
+  ],
+  "author": "Jason Chalom",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TRex22/tp-link-connector/issues"
+  },
+  "dependencies": {
+    "excel4node": "0.1.5",
+    "http": "0.0.0",
+    "util": "0.10.3"
+  },
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.0.1",
+    "jshint": "latest",
+    "istanbul": "latest"
+  }
+}

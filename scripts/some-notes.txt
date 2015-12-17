@@ -1,0 +1,25 @@
+http://blog.keithcirkel.co.uk/how-to-use-npm-as-a-build-tool/
+https://devcenter.heroku.com/articles/node-best-practices
+
+This is an alternative test
+"lint": "jshint **.js"
+
+ALt script
+"postinstall": "scripts/postinstall.sh"
+
+"scripts": {
+  "test": "./node_modules/.bin/istanbul src/tp-link-connect.js ./node_modules/.bin/_mocha -- -R spec",
+  "lint": "jshint **",
+  "prepublish": "npm run build # also runs npm run prebuild",
+  "prebuild": "npm run test # also runs npm run pretest",
+  "pretest": "npm run lint",
+  "coverage": "istanbul cover src/tp-link-connect.js"
+},
+
+
+procfile
+========
+To gain more control over your app’s garbage collector, you can provide flags to V8 in your Procfile:
+web: node --optimize_for_size --max_old_space_size=920 --gc_interval=100 server.js
+This is especially important if your app is running in an environment with less than 1.5 GB of available memory. For example, if you’d like to tailor node to a 512 MB container, try:
+web: node --optimize_for_size --max_old_space_size=460 --gc_interval=100 server.js

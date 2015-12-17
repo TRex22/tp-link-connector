@@ -1,0 +1,17 @@
+sudo: false
+language: node_js
+env:
+  matrix:
+  - TRAVIS_NODE_VERSION="0.10"
+  - TRAVIS_NODE_VERSION="0.11"
+  - TRAVIS_NODE_VERSION="0.12"
+  - TRAVIS_NODE_VERSION="4"
+  - TRAVIS_NODE_VERSION="5"
+deploy:
+  provider: npm
+  email: contact@jasonchalom.com
+  api_key:
+    secure:
+  "on":
+    tags: true
+    repo: TRex22/tp-link-connector
